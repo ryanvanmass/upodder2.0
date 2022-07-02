@@ -5,4 +5,6 @@ RUN pip3 install upodder \
     && rm -rf /wheels \
     && rm -rf /root/.cache/pip/*
 
+RUN mkdir -p /root/.upodder
+
 USER root

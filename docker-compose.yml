@@ -1,10 +1,9 @@
 version: '3'
 services:
-  youtube:
-    image: ryanvanmass/youtube-dl:v2.1
-    container_name: youtube-dl
+  upodder:
+    image: ryanvanmass/upodder:v2
+    container_name: upodder
     volumes:
       - /media:/home/youtube/output:rw
     
-    # Enter Youtube URL here
-    command: 
+    command: cat ${URL} >> /root/.upodder/subscriptions && upodder
